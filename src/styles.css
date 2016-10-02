@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+.header {
+    background-color: #3f3f3f;
+    background-image: -webkit-linear-gradient(top, #696969 0%,#3f3f3f 100%);
+    background-image: -moz-linear-gradient(top, #696969 0%,#3f3f3f 100%);
+    background-image: -o-linear-gradient(top, #696969 0%,#3f3f3f 100%);
+    background-image: linear-gradient(top, #696969 0%,#3f3f3f 100%);
+    height: 42px;
+}
