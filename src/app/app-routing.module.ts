@@ -1,11 +1,29 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AppComponent } from './main/app.component';
+import { AssetsComponent } from './assets/assets.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+   {
+    path: '',
+    component: AppComponent,
+    data: {
+      title: 'Submit your cv and wait'
+    }
+  },
+   {
+    path: 'assets',
+    component: AssetsComponent,
+    data: {
+      title: 'Submit your cv and wait'
+    }
+  },
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  providers: []
-})
-export class CvingRoutingModule { }
+
+];
+
+export const appRoutingProviders: any[] = [
+
+];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

@@ -3,10 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { routing, appRoutingProviders }  from './app-routing.module';
+
 import { AngularFireModule } from 'angularfire2';
 import { MaterialModule } from '@angular/material';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './main/app.component';
+import { AssetsComponent } from './assets/assets.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -19,16 +22,18 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AssetsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
