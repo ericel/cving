@@ -10,6 +10,7 @@ import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './main/app.component';
 import { AssetsComponent } from './assets/assets.component';
+import { HomeComponent } from './home/home.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -23,7 +24,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    AssetsComponent
+    AssetsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
