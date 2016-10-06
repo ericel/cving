@@ -1,4 +1,8 @@
 /*@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';*/
+body, html {
+	background: #ccd;
+	background: url('./assets/images/design/bg_2.png')
+}
 .navbar {
     background-color: #3f3f3f;
     background-image: -webkit-linear-gradient(top, #696969 0%,#3f3f3f 100%);
@@ -16,10 +20,12 @@
     z-index: 1;
     position: relative;
     top:40px;
+    margin-bottom: 10px;
 }
 .navbar-brand{
   background: #ffffff;
   padding: 0.1rem 1rem ; 
   border-radius: 0px;
   border-radius: 4px;
+
 }
