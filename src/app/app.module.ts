@@ -11,6 +11,7 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './main/app.component';
 import { AssetsComponent } from './assets/assets.component';
 import { HomeComponent } from './home/home.component';
+import { AuthComponent } from './auth/auth.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -25,7 +26,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     AssetsComponent,
-    HomeComponent
+    HomeComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
