@@ -6,6 +6,9 @@
 		margin-right: auto;
 	}
 }
+.card {
+    border-color: #0277bd;
+}
 .section--header--t {
     font-size: 34px;
     font-weight: 300;

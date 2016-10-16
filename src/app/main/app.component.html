@@ -1,3 +1,5 @@
+<!--*ngIf="!isHeader"-->
+<div *ngIf="!isHeader">
 <nav class="navbar navbar-fixed-top navbar-light bg-faded">
 <a class="navbar-brand" href="#">Goaf</a>
  
@@ -24,8 +26,26 @@
   
   <div class="pull-sm-right">
   <ul class="nav navbar-nav account">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/auth">log in <span class="sr-only">(current)</span></a>
+      <span class="no-small-template">
+       <li class="nav-item active">
+        <button md-icon-button color="accent"  [md-menu-trigger-for]="menu">
+           <md-icon>add_circle_outline</md-icon>
+        </button>
+        <md-menu class="drop-universal" x-position="before" #menu="mdMenu">
+            <button md-menu-item>List a Business</button>
+            <button md-menu-item> Settings </button>
+            <button md-menu-item> Help </button>
+            <button md-menu-item disabled> Sign Out </button>
+            <md-list>
+               <md-list-item> Pepper </md-list-item>
+               <md-list-item> Salt </md-list-item>
+               <md-list-item> Paprika </md-list-item>
+            </md-list>
+        </md-menu>
+      </li>
+      </span>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/auth">log in </a>
       </li>
     <li class="nav-item">
         <a class="nav-link" routerLink="/auth">sign up</a>
@@ -37,7 +57,7 @@
          <a class="nav-link" routerLink="/assets"><img class="useravatar" src="./assets/images/default_avatar.png" alt="username"></a>
       </li>-->
     </ul>
-   
+  
   </div>
   </div>
   
@@ -46,8 +66,18 @@
   <div class="container-fluid">hey
   </div>
 </div>
+</div>
+<ul>
+    <li><a (click)="setTitle( 'Good morning!' )">Good morning</a>.</li>
+    <li><a (click)="setTitle( 'Good afternoon!' )">Good afternoon</a>.</li>
+    <li><a (click)="setTitle( 'Good evening!' )">Good evening</a>.</li>
+  </ul>
    <router-outlet></router-outlet>
 
 <nav class="navbar  navbar-light bg-faded">
   <a class="navbar-brand" href="#">Fixed bottom</a>
 </nav>
+<span class="no-big-template app-action">
+ <button md-fab color="accent"><md-icon>check circle</md-icon></button>
+
+ </span>
